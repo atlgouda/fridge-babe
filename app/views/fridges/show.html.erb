@@ -12,5 +12,9 @@
 </div>
 
 <div>
+  <%= link_to("Food in Fridge", "/fridges/#{@fridge.id}/foods") %>
+</div>
+
+<div>
   <%= link_to("Destroy", "/fridges/"+@fridge.id.to_s, method: :delete) %>
   </div>

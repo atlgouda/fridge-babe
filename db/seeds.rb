@@ -18,3 +18,10 @@ upstairs = Fridge.create(
     brand: "Not GE",
     size: 90
 )
+
+pizza = Food.create(
+    name: "pizza",
+    pounds: 3,
+    vegan: false,
+    timestamp: "last Friday"
+)

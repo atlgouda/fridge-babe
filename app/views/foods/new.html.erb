@@ -1,2 +1,9 @@
-<h1>Foods#new</h1>
-<p>Find me in app/views/foods/new.html.erb</p>
+
+<h1>New Food</h1>
+
+<%= form_for @food, url: fridge_foods_path do |f| %>
+  Name: <%= f.text_field :name %>
+  Pounds: <%= f.text_field :pounds %>
+  Vegan (true/false): <%= f.text_field :vegan %>
+  <%= f.submit "Create" %>
+<% end %>
