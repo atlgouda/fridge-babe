@@ -7,6 +7,10 @@ class FridgesController < ApplicationController
     @fridge = Fridge.find(params[:id])
   end
 
+  def new
+    @fridge = Fridge.new
+  end
+
   def create
     @fridge = Fridge.create!(fridge_params)
     redirect_to "/fridges/#{@fridge.id}"
@@ -15,6 +19,13 @@ class FridgesController < ApplicationController
   def edit
     @fridge = Fridge.find(params[:id])
   end
+
+  def update
+    @fridge = Fridge.find(params[:id])
+    @fridge.update(fridge_params)
+    redirect_to "/fridges"
+
+end
 
   def destroy
     @fridge = Fridge.find(params[:id])

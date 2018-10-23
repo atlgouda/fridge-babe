@@ -6,6 +6,11 @@
     Cubic Feet: <%= @fridge.size %>
 </h3>
 
+
+<div>
+  <%= link_to("Update", "/fridges/" + @fridge.id.to_s + "/edit") %>
+</div>
+
 <div>
   <%= link_to("Destroy", "/fridges/"+@fridge.id.to_s, method: :delete) %>
   </div>

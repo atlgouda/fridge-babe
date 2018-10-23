@@ -1,2 +1,8 @@
 <h1>Fridges#edit</h1>
-<p>Find me in app/views/fridges/edit.html.erb</p>
+
+<%= form_for @fridge do |f| %>
+    Location: <%= f.text_field :location %>
+    Brand: <%= f.text_field :brand %>
+    Cubic Feet: <%= f.text_field :size %>
+    <%= f.submit "Update" %>
+  <% end %>
