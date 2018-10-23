@@ -1,0 +1,14 @@
+<h1>New Fridge</h1>
+
+<%= form_for Fridge.new do |f| %>
+    Location: 
+    <%= f.text_field :location %>
+  
+    Brand:
+    <%= f.text_field :brand %>
+  
+    Cubic Feet:
+    <%= f.text_field :size %>
+  
+    <%= f.submit "Create" %>
+  <% end %>
