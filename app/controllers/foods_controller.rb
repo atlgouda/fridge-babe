@@ -12,7 +12,7 @@ class FoodsController < ApplicationController
   def new
     @food = Food.new
   end
-
+  
   def create
     @fridge = Fridge.find(params[:fridge_id])
     @fridge.foods.create(food_params)
